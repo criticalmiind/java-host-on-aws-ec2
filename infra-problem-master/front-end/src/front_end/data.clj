@@ -9,13 +9,13 @@
   (st/replace s #"/+$" ""))
 
 (def quote-service-url
-  (remove-trailing-slashes (utils/config "QUOTE_SERVICE_URL" "http://localhost:8081")))
+  (remove-trailing-slashes (utils/config "QUOTE_SERVICE_URL" "http://127.0.0.1:8083")))
 
 (def newsfeed-service-url
-  (remove-trailing-slashes (utils/config "NEWSFEED_SERVICE_URL" "http://localhost:8081")))
+  (remove-trailing-slashes (utils/config "NEWSFEED_SERVICE_URL" "http://127.0.0.1:8082")))
 
 (def newsfeed-token
-  (utils/config "NEWSFEED_SERVICE_TOKEN" ""))
+  (utils/config "NEWSFEED_SERVICE_TOKEN" "T1&eWbYXNWG1w1^YGKDPxAWJ@^et^&kX"))
 
 (def options {:as         :text
               :timeout    1000

@@ -97,4 +97,7 @@ java -jar ./build/quotes.jar;
 10. Click on ```Actions->Edit inbound rules``` <a href="./images/13.png">Ref Image</a>.
 11. Add new rules like <a href="./images/13.png">this</a> and save.
 12. Now go back to your ec2 instance dashboard and open your public ip/public url.
-    Qoute Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote
+
+Qoute Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote
+Feeds Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote
+Frontend Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote

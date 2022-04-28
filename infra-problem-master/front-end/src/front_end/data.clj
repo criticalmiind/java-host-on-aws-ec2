@@ -9,10 +9,10 @@
   (st/replace s #"/+$" ""))
 
 (def quote-service-url
-  (remove-trailing-slashes (utils/config "QUOTE_SERVICE_URL" "http://localhost:8080")))
+  (remove-trailing-slashes (utils/config "QUOTE_SERVICE_URL" "http://localhost:8081")))
 
 (def newsfeed-service-url
-  (remove-trailing-slashes (utils/config "NEWSFEED_SERVICE_URL" "http://localhost:8080")))
+  (remove-trailing-slashes (utils/config "NEWSFEED_SERVICE_URL" "http://localhost:8081")))
 
 (def newsfeed-token
   (utils/config "NEWSFEED_SERVICE_TOKEN" ""))

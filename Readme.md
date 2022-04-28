@@ -44,6 +44,8 @@ sudo apt-get update
 sudo apt-get install python3.6
 ```
 
+Launching ec2 Ref: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateWebServer.html">Here</a>
+
 
 
 ## Project Setup in AWS EC2 Instance
@@ -64,5 +66,35 @@ cd infra-problem-master;
 
 3. Installing Project Dependancies:
 ```bash
-chmod a+x ./lein.sh
+# for more visit https://leiningen.org/#install
+apt install leiningen;
+
+# install make package if not installed already
+apt install make;
+
+# you need to ensure that the common libraries are installed: follow commond will allow you to build the JARs.
+make libs;
+
+# To build all the JARs and generate the static tarball, run the make clean all command from this directory. The JARs and tarball will appear in the build/ directory.
+make clean all;
 ```
+
+4. Run our project script/frontends:
+```bash
+# this is our three services which we run inside the aws ec2 ubuntu
+java -jar ./build/quotes.jar; # INFO: Running quotes on port 8080
+java -jar ./build/newsfeed.jar;
+java -jar ./build/quotes.jar;
+
+# Our Service will run just inside the ec2, we can't access any of that service outside, so let see how we can configure ec2 service/ports to access outside on public ip/url
+```
+
+5. Check your instantance, then click on ```Actions->Security->Change security groups``` <a href="./images/9.png">Ref Image</a>.
+6. Note your instance group name, in my case its ```launch-wizard-1``` <a href="./images/10.png">Ref Image</a>.
+7. Goto you left sidebar and under ```Network & Security``` click on ```Security Groups``` <a href="./images/11.png">Ref Image</a>.
+8. click on your instance security group, in my case ```launch-wizard-1``` <a href="./images/12.png">Ref Image</a>.
+9. Click on ```Actions->Edit inbound rules``` <a href="./images/13.png">Ref Image</a>.
+10. Click on ```Actions->Edit inbound rules``` <a href="./images/13.png">Ref Image</a>.
+11. Add new rules like <a href="./images/13.png">this</a> and save.
+12. Now go back to your ec2 instance dashboard and open your public ip/public url.
+    Qoute Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote

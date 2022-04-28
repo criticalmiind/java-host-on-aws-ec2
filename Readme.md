@@ -97,7 +97,7 @@ java -jar ./build/quotes.jar &
 7. Goto you left sidebar and under ```Network & Security``` click on ```Security Groups``` <a href="./images/11.png">Ref Image</a>.
 8. click on your instance security group, in my case ```launch-wizard-1``` <a href="./images/12.png">Ref Image</a>.
 9. Click on ```Actions->Edit inbound rules``` <a href="./images/13.png">Ref Image</a>.
-10. Click on ```Actions->Edit inbound rules``` <a href="./images/13.png">Ref Image</a>.
+10. Click on ```Actions->Edit inbound rules``` <a href="./images/14.png">Ref Image</a>.
 11. Add new rules like <a href="./images/13.png">this</a> and save.
 12. Now go back to your ec2 instance dashboard and open your public ip/public url.
 

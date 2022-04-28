@@ -82,9 +82,12 @@ make clean all;
 4. Run our project script/frontends:
 ```bash
 # this is our three services which we run inside the aws ec2 ubuntu
-java -jar ./build/quotes.jar; # INFO: Running quotes on port 8080
-java -jar ./build/newsfeed.jar;
-java -jar ./build/quotes.jar;
+java -jar ./build/quotes.jar & # INFO: Running quotes on port 8080
+java -jar ./build/newsfeed.jar &
+java -jar ./build/quotes.jar &
+
+# or run bash file from project
+./run.sh
 
 # Our Service will run just inside the ec2, we can't access any of that service outside, so let see how we can configure ec2 service/ports to access outside on public ip/url
 ```
@@ -98,6 +101,11 @@ java -jar ./build/quotes.jar;
 11. Add new rules like <a href="./images/13.png">this</a> and save.
 12. Now go back to your ec2 instance dashboard and open your public ip/public url.
 
-Qoute Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote
-Feeds Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote
-Frontend Link: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8080/api/quote
+
+* `quotes URL` which serves a random quote from `quotes/resources/quotes.json`
+* `newsfeed url` which aggregates several RSS feeds together
+* `front-end url` which calls the two previous (quote&newsfeed) services and displays the results.
+
+* `qoute url`: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8083/api/quote
+* `newsfeed url`: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8082/api/feeds
+* `front-end url`: http://ec2-34-220-56-187.us-west-2.compute.amazonaws.com:8081/

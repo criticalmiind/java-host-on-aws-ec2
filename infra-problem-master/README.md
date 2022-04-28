@@ -57,3 +57,19 @@ All the apps take environment variables to configure them and expose the URL `/p
 
 * `APP_PORT`: The port on which to run the app
 
+
+
+
+</br>
+</br>
+</br>
+
+# Thank You!
+For more visit my profiles:
+<a href="https://github.com/criticalmiind/"><i>GitHub</i></a>,
+<a href="https://www.youtube.com/c/shawalahmadmohmandofficail"><i>Youtube</i></a>,
+<a href="https://www.google.com/search?q=shawal+Ahmad+Mohmand"><i>Google</i></a>,
+<a href="https://web.facebook.com/ShawalAhmadOfficialPage/"><i>Facebook</i></a>,
+<a href="https://pk.linkedin.com/in/shawalahmad"><i>LinkedIn</i></a>,
+<a href="https://stackoverflow.com/users/13789062/shawal-ahmad-khan"><i>Stackoverflow</i></a>,
+<a href="https://www.fiverr.com/users/kamaljankamal4/"><i>Fiverr</i></a>.
